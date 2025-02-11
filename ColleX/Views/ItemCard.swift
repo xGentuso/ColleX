@@ -12,49 +12,59 @@ struct ItemCard: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            // MARK: - Image Section
-            ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color.gray.opacity(0.5), Color.gray.opacity(0.2)]), startPoint: .top, endPoint: .bottom)
-                    .frame(height: 140)
+            // Load image from URL
+            if let imageUrl = item.imageName, let url = URL(string: imageUrl) {
+                AsyncImage(url: url) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 120)
+                        .clipped()
+                } placeholder: {
+                    Rectangle()
+                        .fill(Color.gray.opacity(0.3))
+                        .frame(height: 120)
+                        .overlay(
+                            Text("Loading...")
+                                .foregroundColor(.white)
+                                .bold()
+                        )
+                }
+                .cornerRadius(8)
+            } else {
+                // Placeholder for missing image
+                Rectangle()
+                    .fill(Color.gray.opacity(0.3))
+                    .frame(height: 120)
+                    .overlay(
+                        Text("No Image")
+                            .foregroundColor(.white)
+                            .bold()
+                    )
                     .cornerRadius(8)
-
-                Image(systemName: "photo")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
-                    .foregroundColor(.white.opacity(0.8))
             }
 
-            // MARK: - Item Name
+            // Item details
             Text(item.name)
                 .font(.headline)
-                .foregroundColor(.primary) // Adapts to Light/Dark Mode
                 .lineLimit(1)
-
-            // MARK: - Item Details (Condition & Price)
             HStack {
-                Text(item.condition)
+                Text("Condition: \(item.condition)")
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
-                    .background(Color.blue.opacity(0.2))
-                    .cornerRadius(6)
-
                 Spacer()
-
                 Text("$\(item.marketValue, specifier: "%.2f")")
                     .font(.subheadline)
                     .bold()
-                    .foregroundColor(.blue)
             }
         }
         .padding()
-        .background(Color(.secondarySystemBackground)) // Dark Mode Adaptive Background
+        .background(Color.white)
         .cornerRadius(12)
-        .shadow(color: Color.black.opacity(0.2), radius: 6, x: 0, y: 4)
+        .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
     }
 }
+
 
 // MARK: - Preview
 struct ItemCard_Previews: PreviewProvider {

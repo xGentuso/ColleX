@@ -31,14 +31,22 @@ struct MainTabView: View {
                 }
 
             MarketplaceView()
-                .tabItem {
-                    Image(systemName: "cart.fill")
-                    Text("Marketplace")
-                }
+                    .tabItem {
+                        Image(systemName: "cart.fill")
+                        Text("Marketplace")
+                    }
+                
+                PokemonCardListView()
+                    .tabItem {
+                        Image(systemName: "bolt.fill")
+                        Text("Pokémon Cards")
+                    }
+
+            
 
             AuctionView()
                 .tabItem {
-                    Image(systemName: "gavel.fill")
+                    Image(systemName: "hammer.fill")
                     Text("Auctions")
                 }
 

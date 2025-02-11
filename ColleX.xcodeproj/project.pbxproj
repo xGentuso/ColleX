@@ -38,6 +38,9 @@
 		8C9217D22D5A666F00C7DABD /* AuctionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9217D12D5A666F00C7DABD /* AuctionDetailView.swift */; };
 		8C9217D42D5A667600C7DABD /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9217D32D5A667600C7DABD /* ItemDetailView.swift */; };
 		8C9217D62D5A66E300C7DABD /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9217D52D5A66E300C7DABD /* ButtonStyles.swift */; };
+		8CD54DA02D5B0D9300A1FF15 /* PokemonAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD54D9F2D5B0D9300A1FF15 /* PokemonAPIService.swift */; };
+		8CD54DA42D5B0DDA00A1FF15 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD54DA32D5B0DDA00A1FF15 /* PokemonViewModel.swift */; };
+		8CD54DA62D5B0DF400A1FF15 /* PokemonCardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CD54DA52D5B0DF400A1FF15 /* PokemonCardListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		8C9217D12D5A666F00C7DABD /* AuctionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailView.swift; sourceTree = "<group>"; };
 		8C9217D32D5A667600C7DABD /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		8C9217D52D5A66E300C7DABD /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		8CD54D9F2D5B0D9300A1FF15 /* PokemonAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonAPIService.swift; sourceTree = "<group>"; };
+		8CD54DA32D5B0DDA00A1FF15 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
+		8CD54DA52D5B0DF400A1FF15 /* PokemonCardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCardListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +156,7 @@
 				8C9217CF2D5A64DE00C7DABD /* ItemCard.swift */,
 				8C9217D12D5A666F00C7DABD /* AuctionDetailView.swift */,
 				8C9217D32D5A667600C7DABD /* ItemDetailView.swift */,
+				8CD54DA52D5B0DF400A1FF15 /* PokemonCardListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 				8C9217B62D5A60C800C7DABD /* AuctionViewModel.swift */,
 				8C9217B82D5A60D700C7DABD /* CommunityViewModel.swift */,
 				8C9217B22D5A60B600C7DABD /* ProfileViewModel.swift */,
+				8CD54DA32D5B0DDA00A1FF15 /* PokemonViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				8C9217C02D5A612500C7DABD /* PaymentService.swift */,
 				8C9217C22D5A612E00C7DABD /* NetworkService.swift */,
 				8C9217CD2D5A640600C7DABD /* ItemDataManager.swift */,
+				8CD54D9F2D5B0D9300A1FF15 /* PokemonAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -269,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD54DA02D5B0D9300A1FF15 /* PokemonAPIService.swift in Sources */,
 				8C9217C52D5A613B00C7DABD /* Constants.swift in Sources */,
 				8C9217A32D5A5F8100C7DABD /* PortfolioView.swift in Sources */,
 				8C9217AD2D5A5FC500C7DABD /* ProfileView.swift in Sources */,
@@ -292,11 +302,13 @@
 				8C9217CE2D5A640600C7DABD /* ItemDataManager.swift in Sources */,
 				8C9217A72D5A5FA500C7DABD /* AuctionView.swift in Sources */,
 				8C9217D22D5A666F00C7DABD /* AuctionDetailView.swift in Sources */,
+				8CD54DA42D5B0DDA00A1FF15 /* PokemonViewModel.swift in Sources */,
 				8C9217B12D5A60A900C7DABD /* HomeViewModel.swift in Sources */,
 				8C9217C72D5A614300C7DABD /* Extensions.swift in Sources */,
 				8C9217C92D5A614A00C7DABD /* Helpers.swift in Sources */,
 				8C9217B32D5A60B600C7DABD /* ProfileViewModel.swift in Sources */,
 				8C92179F2D5A5F6A00C7DABD /* MainTabView.swift in Sources */,
+				8CD54DA62D5B0DF400A1FF15 /* PokemonCardListView.swift in Sources */,
 				8C9217B52D5A60BE00C7DABD /* MarketplaceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
