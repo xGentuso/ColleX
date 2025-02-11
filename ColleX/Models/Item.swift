@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct Item: Identifiable {
+    let id: UUID = UUID()
+    var name: String
+    var condition: String
+    var marketValue: Double
+    var acquiredDate: Date
+}
