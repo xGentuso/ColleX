@@ -10,7 +10,12 @@ import Foundation
 
 class PokemonAPIService {
     private let baseURL = "https://api.pokemontcg.io/v2/cards"
-    private let apiKey = "5cda6610-b9ca-452c-a3eb-d44f0af403c2" // Replace with your API Key
+    
+    // Load API Key from Build Settings
+    private let apiKey: String = {
+        return Bundle.main.object(forInfoDictionaryKey: "API_KEY") as? String ?? ""
+    }()
+    
     private let maxPages = 3 // Limit pagination to 3 pages max
 
     // Fetch Pokémon cards (Optional: Query for filtering)

@@ -1,0 +1,12 @@
+# Xcode Specific Files
+DerivedData/
+.DS_Store
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+
+# Ignore API Keys and Configuration Files
+Config.xcconfig
+*.secrets
